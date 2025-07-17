@@ -178,7 +178,7 @@ const BenefitModal = ({ isOpen, onClose, benefitType }: BenefitModalProps) => {
         </DialogContent>
       </Dialog>
       
-      <ContactForm isOpen={isContactFormOpen} onClose={handleContactFormClose} />
+      <ContactForm isOpen={isContactFormOpen} onClose={handleContactFormClose} formOrigem={benefitType}/>
     </>
   );
 };

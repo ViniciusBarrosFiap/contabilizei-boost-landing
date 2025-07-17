@@ -8,7 +8,7 @@ const ReinforceCTASection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const handleConsultoriaClick = () => {
-    console.log('Clique no reforço de CTA');
+    //console.log('Clique no reforço de CTA');
     setIsFormOpen(true);
   };
 
@@ -33,7 +33,7 @@ const ReinforceCTASection = () => {
         </div>
       </section>
       
-      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} formOrigem="Modal ReinforceCTA"/>
     </>
   );
 };

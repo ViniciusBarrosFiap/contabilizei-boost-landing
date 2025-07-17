@@ -10,6 +10,7 @@ declare global {
           region?: string;
           target: string;
           onFormSubmitted?: () => void;
+          onFormReady?: () => void
         }) => void;
       };
     };
