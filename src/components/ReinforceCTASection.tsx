@@ -24,10 +24,11 @@ const ReinforceCTASection = () => {
             <Button 
               onClick={handleConsultoriaClick}
               size="lg"
-              className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-12 py-6 text-xl rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="bg-contabilizei-orange hover:bg-contabilizei-orange-light text-black font-bold px-6 py-3 md:px-8 md:py-4 text-base md:text-lg rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full sm:w-auto"
             >
               Quero minha consultoria gratuita
             </Button>
+
           </Card>
         </div>
       </section>
