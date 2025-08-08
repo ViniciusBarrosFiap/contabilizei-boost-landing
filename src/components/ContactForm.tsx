@@ -15,11 +15,9 @@ import { CheckCircle } from "lucide-react";
 interface ContactFormProps {
   isOpen: boolean;
   onClose: () => void;
-  formOrigem: string; // <- nova prop para definir a origem do formulário dinamicamente
 }
 
-
-const ContactForm = ({ isOpen, onClose, formOrigem }: ContactFormProps) => {
+const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
@@ -41,25 +39,12 @@ const ContactForm = ({ isOpen, onClose, formOrigem }: ContactFormProps) => {
               setIsSubmitted(false);
               onClose();
             }, 2000);
-          },
-          // @ts-expect-error - a tipagem do HubSpot não reconhece o argumento $form, mas ele existe na prática
-          onFormReady: function ($form) {
-            // Verifica se o campo já existe
-            let input = $form.querySelector('input[name="form_origem"]');
-            if (!input) {
-              input = document.createElement('input');
-              input.type = 'hidden';
-              input.name = 'form_origem';
-              $form.appendChild(input);
-            }
-
-            input.value = formOrigem;
           }
         });
       }
     };
     document.body.appendChild(script);
-  }, [isOpen, isSubmitted, onClose, formOrigem]);
+  }, [isOpen, isSubmitted, onClose]);
 
   if (isSubmitted) {
     return (

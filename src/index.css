@@ -37,6 +37,12 @@ All colors MUST be HSL.
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+    
+    /* Contabilizei Colors */
+    --contabilizei-blue: 220 58% 23%;
+    --contabilizei-orange: 186 100% 50%;
+    --contabilizei-gray: 220 9% 46%;
+    --contabilizei-success: 120 60% 50%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,39 +106,6 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer components {
-  #hubspot-form form {
-    @apply bg-white rounded-xl p-4;
-    font-family: 'Lato', sans-serif;
-  }
-
-  #hubspot-form .hs-form__title,
-  #hubspot-form .hs-richtext {
-    @apply text-center text-primary font-bold mb-2;
-  }
-
-  #hubspot-form label {
-    @apply block font-medium text-gray-700 mb-1;
-  }
-
-  #hubspot-form input[type="text"],
-  #hubspot-form input[type="email"],
-  #hubspot-form input[type="tel"],
-  #hubspot-form textarea {
-    @apply w-full px-4 py-2 border rounded-md mb-4 text-base;
-    border-color: hsl(var(--border));
-  }
-
-  #hubspot-form input[type="submit"] {
-    @apply text-black font-semibold w-full py-3 rounded-md cursor-pointer transition-all duration-300;
-    background-color: #04F7F7; /* Azul claro padrão da página */
-  }
-
-  #hubspot-form input[type="submit"]:hover {
-    background-color: #0beeee;
+    @apply bg-background text-foreground font-lato;
   }
 }
